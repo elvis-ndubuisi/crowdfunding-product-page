@@ -1,0 +1,24 @@
+{
+  "name": "crowdfunding-product-page",
+  "version": "1.0.0",
+  "description": "- UI Layout\r - Modular UI\r - State Management (frontend)\r - Data fetching (axios)\r - API\r - Responsive UI",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimplyElvis/crowdfunding-product-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimplyElvis/crowdfunding-product-page/issues"
+  },
+  "homepage": "https://github.com/SimplyElvis/crowdfunding-product-page#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
