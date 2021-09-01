@@ -1,0 +1,26 @@
+%button-base {
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  padding: 1rem 1.8rem;
+  text-transform: capitalize;
+  color: white;
+  background-color: $dark-cyan;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: map-get($font-weights, "bold");
+}
+
+.btn-primary {
+  @extend %button-base;
+}
+
+.btn-primary:hover {
+  transition: background-color 0.3s ease;
+  background-color: $moderate-cyan;
+}
+.btn-bookmark {
+  @extend %button-base;
+  background-color: lighten($dark-gray, 45%);
+  color: $dark-cyan;
+}
