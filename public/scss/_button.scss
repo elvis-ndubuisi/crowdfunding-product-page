@@ -1,18 +1,19 @@
 %button-base {
   outline: none;
   border: none;
-  border-radius: 5rem;
-  padding: 1rem 1.8rem;
+  border-radius: 3rem;
   text-transform: capitalize;
   color: white;
-  background-color: $dark-cyan;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: map-get($font-weights, "bold");
+  padding: 1em;
+  margin: 0.5rem 0.3rem;
 }
 
 .btn-primary {
   @extend %button-base;
+  background-color: $dark-cyan;
 }
 
 .btn-primary:hover {
@@ -23,4 +24,23 @@
   @extend %button-base;
   background-color: lighten($dark-gray, 45%);
   color: $dark-cyan;
+  @include flex(row, space-between);
+
+  i {
+    margin: 0.5rem;
+  }
+}
+.btn-bookmark:hover {
+  transition: background-color 0.3s ease;
+  background-color: $moderate-cyan;
+  color: white;
+}
+
+.btn-plain {
+  @extend %button-base;
+  background-color: lighten($black, 80%);
+  border: solid 1px $dark-gray;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: $black;
 }

@@ -1,0 +1,267 @@
+@import "variables";
+@import "utils";
+@import "resets";
+@import "button";
+
+:root {
+  font-size: 16px;
+}
+
+nav {
+  position: absolute;
+  z-index: 5;
+  padding-top: 2rem;
+  color: white;
+
+  div {
+    @include flex(row, space-between);
+    padding: 0 1rem;
+
+    span {
+      font-weight: map-get($font-weights, "medium");
+    }
+
+    a {
+      color: white;
+    }
+  }
+}
+
+#showcase {
+  height: 20em;
+  width: inherit;
+  @include imgElem("../img/image-hero-mobile.jpg");
+}
+
+@media screen and (min-width: 800px) {
+  #showcase {
+    @include imgElem("../img/image-hero-desktop.jpg");
+  }
+}
+
+#logo {
+  width: 4em;
+  height: 4em;
+  border-radius: 2em;
+  background-color: black;
+  overflow: hidden;
+  @include imgElem("../img/logo-mastercraft.svg");
+}
+
+.container {
+  max-width: $container-width;
+  background-color: white;
+  margin: 1rem auto;
+}
+
+#main {
+  width: 100%;
+  position: relative;
+
+  .main-wrapper {
+    //   @extend %centerAbsolute;
+    @include centerAbsolute(-50%, -9%);
+
+    section:first-child {
+      @include flex(column, center);
+      position: relative;
+
+      #logo {
+        @extend %centerAbsolute;
+      }
+
+      h2 {
+        margin-top: 1rem;
+        text-transform: capitalize;
+      }
+
+      div:last-child {
+        width: 100%;
+        @include flex(row, space-between);
+        margin-top: $spacing;
+      }
+    }
+  }
+}
+.statistics {
+  @include flex(row, space-between);
+
+  > div {
+    text-align: center;
+    flex: 1;
+
+    p {
+      color: lighten($black, 40%);
+    }
+  }
+
+  > div:nth-child(2) {
+    border-left: solid 1px lighten($dark-gray, 30%);
+    border-right: solid 1px lighten($dark-gray, 30%);
+  }
+}
+
+.progress-bar {
+  background-color: lighten($dark-gray, 40%);
+  height: 1rem;
+  border-radius: 3em;
+  overflow: hidden;
+  margin: 0.8rem 0;
+
+  .bar {
+    height: inherit;
+    width: 40%;
+    border-radius: 3em;
+    background-color: $moderate-cyan;
+  }
+}
+
+#projects {
+  > h3 {
+    margin: 1.5rem 0;
+  }
+
+  p {
+    margin: 1.5rem 0;
+  }
+
+  article {
+    border: 1px solid lighten($dark-gray, 40%);
+    border-radius: $radius;
+    padding: $spacing;
+    margin: 1rem 0;
+
+    > div:first-child {
+      @include flex(row, space-between);
+    }
+
+    > div:last-child {
+      @include flex(row, space-between);
+    }
+  }
+}
+
+.pledge-price {
+  color: $moderate-cyan;
+  font-weight: map-get($font-weights, "medium");
+  margin-left: 1rem;
+}
+
+.superscript {
+  font-size: 0.8rem;
+  font-weight: map-get($font-weights, "regular");
+  position: absolute;
+  padding-left: 0.2em;
+}
+
+.top {
+  font-size: 0.9rem;
+  padding-right: 0.3rem;
+  color: lighten($black, 50%);
+}
+
+// modular element styles
+#modular-container {
+  display: none;
+}
+
+#modular-container.visible {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  @include flex(column, center);
+  background-color: adjust-color($black, $alpha: -0.3);
+
+  section {
+    max-width: $container-width;
+    margin: 0 1rem;
+
+    p {
+      margin: 1.3em 0;
+    }
+  }
+
+  .modular {
+    display: none;
+  }
+
+  .modular.visible {
+    display: block;
+  }
+
+  .modular.visible:first-child {
+    max-width: 500px;
+    display: grid;
+    place-items: center;
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.pledge {
+  cursor: pointer;
+  padding: 0.9rem;
+  border: solid 2px transparent;
+  border-radius: $radius;
+
+  > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  #pledge-field {
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+  #pledge-field.show-field {
+    transition: all 0.3s ease;
+    display: block;
+  }
+
+  .field {
+    height: 2rem;
+    border: none;
+    outline: 0;
+    padding-left: 0.8rem;
+  }
+  .field::placeholder {
+    font-family: inherit;
+  }
+}
+.pledge:hover {
+  border: solid 2px $moderate-cyan;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  border: solid 1px $dark-gray;
+  cursor: pointer;
+  padding: 3px;
+  flex-basis: auto;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+.dot:hover {
+  border: solid 2px $dark-gray;
+}
+.dot:hover .dot-inner {
+  display: block;
+  background-color: $moderate-cyan;
+}
+.dot-inner {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background-color: $moderate-cyan;
+}

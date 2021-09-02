@@ -31,3 +31,10 @@
   left: 50%;
   transform: translate($x, $y);
 }
+
+.flx-rw {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
