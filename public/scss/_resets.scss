@@ -39,3 +39,15 @@ h2,
 p {
   margin: 0.5rem 0;
 }
+
+h4 {
+  position: relative;
+}
+
+i {
+  cursor: pointer;
+}
+
+p {
+  color: lighten($black, 50%);
+}
