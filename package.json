@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/SimplyElvis/crowdfunding-product-page#readme",
   "dependencies": {
-    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }
