@@ -25,6 +25,8 @@
       <div class="wrapper">
         <span>crowdfund</span>
         <div class="nav-bar">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Discover</a></li>
@@ -103,7 +105,9 @@
               </p>
               <div>
                 <h2>191 <span class="superscript">left</span></h2>
-                <button class="btn-primary">Select reward</button>
+                <button class="btn-primary" id="selectReward">
+                  Select reward
+                </button>
               </div>
             </article>
 
@@ -119,7 +123,9 @@
               </p>
               <div>
                 <h2>191 <span class="superscript">left</span></h2>
-                <button class="btn-primary">Select reward</button>
+                <button class="btn-primary" id="selectReward">
+                  Select reward
+                </button>
               </div>
             </article>
           </section>
@@ -129,7 +135,7 @@
 
     <!-- modular UI -->
 
-    <div id="modular-container" class="visible">
+    <div id="modular-container">
       <!-- thank you -->
       <section class="modular visible" id="thanks">
         <i class="far fa-check-circle fa-3x"></i>
@@ -190,5 +196,9 @@
         </div>
       </section>
     </div>
+
+    <!-- scripts -->
+    <script src="./scripts/data.json"></script>
+    <script src="./scripts/browser.js"></script>
   </body>
 </html>
