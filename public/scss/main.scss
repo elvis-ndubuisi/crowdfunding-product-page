@@ -59,11 +59,8 @@ nav {
   position: relative;
 
   .main-wrapper {
-<<<<<<< HEAD
     width: 100%;
     padding: 0 1rem;
-=======
->>>>>>> 4398a581d7d6097350dcfcf0dd984b9af058da55
     //   @extend %centerAbsolute;
     @include centerAbsolute(-50%, -9%);
 
@@ -80,20 +77,16 @@ nav {
         text-transform: capitalize;
       }
 
-<<<<<<< HEAD
       p {
         text-align: center;
       }
 
-=======
->>>>>>> 4398a581d7d6097350dcfcf0dd984b9af058da55
       div:last-child {
         width: 100%;
         @include flex(row, space-between);
         margin-top: $spacing;
       }
     }
-<<<<<<< HEAD
     @media screen and (max-width: 800px) {
       section:first-child {
         .btn-bookmark i {
@@ -101,14 +94,11 @@ nav {
         }
       }
     }
-=======
->>>>>>> 4398a581d7d6097350dcfcf0dd984b9af058da55
   }
 }
 .statistics {
   @include flex(row, space-between);
 
-<<<<<<< HEAD
   @media screen and (max-width: 800px) {
     @include flex(column, center);
 
@@ -122,8 +112,6 @@ nav {
     }
   }
 
-=======
->>>>>>> 4398a581d7d6097350dcfcf0dd984b9af058da55
   > div {
     text-align: center;
     flex: 1;
@@ -132,18 +120,11 @@ nav {
       color: lighten($black, 40%);
     }
   }
-<<<<<<< HEAD
   @media screen and (min-width: 800px) {
     > div:nth-child(2) {
       border-left: solid 1px lighten($dark-gray, 30%);
       border-right: solid 1px lighten($dark-gray, 30%);
     }
-=======
-
-  > div:nth-child(2) {
-    border-left: solid 1px lighten($dark-gray, 30%);
-    border-right: solid 1px lighten($dark-gray, 30%);
->>>>>>> 4398a581d7d6097350dcfcf0dd984b9af058da55
   }
 }
 
@@ -185,7 +166,6 @@ nav {
       @include flex(row, space-between);
     }
   }
-<<<<<<< HEAD
 
   @media screen and (max-width: 800px) {
     p {
@@ -203,8 +183,6 @@ nav {
       }
     }
   }
-=======
->>>>>>> 4398a581d7d6097350dcfcf0dd984b9af058da55
 }
 
 .pledge-price {
@@ -231,10 +209,7 @@ nav {
   display: none;
 }
 
-<<<<<<< HEAD
 // .visible to display
-=======
->>>>>>> 4398a581d7d6097350dcfcf0dd984b9af058da55
 #modular-container.visible {
   display: block;
   position: fixed;
@@ -286,14 +261,11 @@ nav {
     align-items: flex-start;
     justify-content: space-between;
   }
-<<<<<<< HEAD
   @media screen and (max-width: 800px) {
     > div:first-child .pledge-price {
       display: none;
     }
   }
-=======
->>>>>>> 4398a581d7d6097350dcfcf0dd984b9af058da55
 
   #pledge-field {
     display: none;
@@ -315,10 +287,6 @@ nav {
     font-family: inherit;
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4398a581d7d6097350dcfcf0dd984b9af058da55
 .pledge:hover {
   border: solid 2px $moderate-cyan;
 }
