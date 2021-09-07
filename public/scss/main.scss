@@ -252,8 +252,10 @@ nav {
 .pledge {
   cursor: pointer;
   padding: 0.9rem;
-  border: solid 2px transparent;
+  border: solid 2px lighten($dark-gray, 45%);
   border-radius: $radius;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
 
   > div:first-child {
     display: flex;
@@ -301,6 +303,9 @@ nav {
   flex-basis: auto;
   flex-shrink: 0;
   margin-right: 1rem;
+}
+.dot.toggle .dot-inner {
+  display: none;
 }
 .dot:hover {
   border: solid 2px $dark-gray;

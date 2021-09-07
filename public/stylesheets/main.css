@@ -492,8 +492,10 @@ nav div a {
 .pledge {
   cursor: pointer;
   padding: 0.9rem;
-  border: solid 2px transparent;
+  border: solid 2px #ededed;
   border-radius: 5px;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
 }
 
 .pledge > div:first-child {
@@ -569,6 +571,10 @@ nav div a {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-right: 1rem;
+}
+
+.dot.toggle .dot-inner {
+  display: none;
 }
 
 .dot:hover {
